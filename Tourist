@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+  <!-- Sethavan Sen -->
     <style>
 
 h1 {
@@ -21,13 +22,16 @@ body {
   background-color: lightblue;
 }
 
-img.resize {
-    width: 100px;
-    height: 100px;
+img {
+    max-width: 500px; 
+    max-height: 500px;
 }
       </style>
+      
     <title>France</title>
+    
   </head>
+  
   <body>
     <center><h1>Paris</h1></center>
      <hr>
@@ -51,23 +55,58 @@ Paris has is an important city for France. It is often      called “city of lo
         <li>Centre Georges Pompidou</li>
       </ul>
       
+      <h2>Eiffel Tower</h2>
+      
     <img src="https://www.discoverwalks.com/blog/wp-content/uploads/2017/06/around-the-eiffel-tower.jpg">
+    
+    <hr>
+    
+    <h2>The Louvre</h2>
     
     <img src="https://media.architecturaldigest.com/photos/5900cc370638dd3b70018b33/4:3/w_384/Secrets%2520of%2520Louvre%25201.jpg">
     
+       <hr>
+    
+    <h2>Notre-Dame de Paris</h2>
+    
     <img src="https://en.parisinfo.com/var/otcp/sites/images/media/1.-photos/02.-sites-culturels-630-x-405/cathedrale-notre-dame-nuit-630x405-c-thinkstock2/36086-1-fre-FR/Cathedrale-Notre-Dame-nuit-630x405-C-Thinkstock.jpg">
+    
+       <hr>
+    
+    <h2>Disneyland Paris</h2>
     
     <img src="https://jonesinternational.co.uk/wp-content/uploads/2017/12/Disney-header.jpg">
     
+       <hr>
+    
+    <h2>Arc de Triomphe</h2>
+    
     <img src="https://en.parisinfo.com/var/otcp/sites/images/media/1.-photos/02.-sites-culturels-630-x-405/arc-de-triomphe-de-face-630x405-c-thinkstock/35754-1-fre-FR/Arc-de-Triomphe-de-face-630x405-C-Thinkstock.jpg">
+    
+       <hr>
+    
+    <h2>Sacre-Coeur</h2>
     
     <img src="https://lonelyplanetimages.imgix.net/a/g/hi/t/7ad4233f75ec81e3a9a38897ee57353d-basilique-du-sacre-coeur.jpg?auto=enhance&w=770&h=430&fit=crop">
     
+       <hr>
+    
+    <h2>Musee d'Orsay</h2>
+    
     <img src="http://www.parismuseumpass.com/datas/musees/m/u/muse-drsquoorsay/xl/musee-d-orsay-50bf789dd1e2b.jpg">
+    
+       <hr>
+    
+    <h2>Tuileries Garden</h2>
     
     <img src="https://en.parisinfo.com/var/otcp/sites/images/node_43/node_51/node_77884/node_77888/jardin-des-tuileries-fleurs-et-vue-sur-le-louvre-%7C-630x405-%7C-%C2%A9-fotolia-tanya/11884894-1-fre-FR/Jardin-des-Tuileries-Fleurs-et-vue-sur-le-Louvre-%7C-630x405-%7C-%C2%A9-Fotolia-Tanya.jpg">
     
+       <hr>
+    
+    <h2>Centre Georges Pompidou</h2>
+    
     <img src="https://cdn.theculturetrip.com/wp-content/uploads/2016/01/16690456146_29daf653b0_k-1024x576.jpg">
+  
   
 
       
