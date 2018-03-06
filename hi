@@ -1,228 +1,73 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <title>Im Seth and a Faggot Gay Ass Nibba</title>
-  </head>
-  <body>
-  <div class="container">
-  <a href="https://twitter.com/austin_dudas" class="social-container twitter">
-    <div class="social-cube">
-      <div class="front">
-        Twitter
-      </div>
-      <div class="bottom">
-        @austin_dudas
-      </div>
-    </div>
-  </a>
-
-  <a href="#" class="social-container facebook">
-    <div class="social-cube">
-      <div class="front">
-        Facebook
-      </div>
-      <div class="bottom">
-        Username
-      </div>
-    </div>
-  </a>
-
-  <a href="#" class="social-container youtube">
-    <div class="social-cube">
-      <div class="front">
-        YouTube
-      </div>
-      <div class="bottom">
-        Username
-      </div>
-    </div>
-  </a>
-
-  <a href="#" class="social-container github">
-    <div class="social-cube">
-      <div class="front">
-        GitHub
-      </div>
-      <div class="bottom">
-        Username
-      </div>
-    </div>
-  </a>
-
-  <a href="#" class="social-container dribbble">
-    <div class="social-cube">
-      <div class="front">
-        Dribbble
-      </div>
-      <div class="bottom">
-        Username
-      </div>
-    </div>
-  </a>
-
-  <a href="#" class="social-container codepen">
-    <div class="social-cube">
-      <div class="front">
-        CodePen
-      </div>
-      <div class="bottom">
-        Username
-      </div>
-    </div>
-  </a>
-  
-</div>
-  </body>
-</html>
-
-
-
-
-
+  <style>
+  @import url("https://fonts.googleapis.com/css?family=Patrick+Hand");
 
 body {
-  font-family: 'Dosis';
-  background: black;
-  display: flex;
-  height: 900px;
-  margin: 0;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-body .container {
-  text-align: center;
-  max-width: 550px;
+  padding: 4em;
+  background: #EEE;
 }
 
-.social-container {
+a span {
+  background: #FFF;
+  display: block;
+  padding: 5px 15px;
+  border-radius: 5px;
+  border: 2px solid #000;
+}
+a:hover {
+  box-shadow: 0 2px 0 #000, 0 2px 0px 2px #f03755;
+}
+a:active {
+  top: 4px;
+  padding-bottom: 0px;
+  box-shadow: 0 1px 0 #000;
+}
+a {
   position: relative;
-  display: inline-block;
-  width: 164px;
-  height: 36px;
-  -webkit-perspective: 300px;
-          perspective: 300px;
-  font-size: 24px;
-  margin: 8px;
-}
-.social-container .social-cube {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  -webkit-transition: all 0.333s;
-  transition: all 0.333s;
-  -webkit-transform: translateZ(-18px);
-          transform: translateZ(-18px);
-}
-.social-container .social-cube .front, .social-container .social-cube .bottom {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: #fff;
-  -webkit-transition: background 0.333s;
-  transition: background 0.333s;
-}
-.social-container .social-cube .front {
-  -webkit-transform: rotateX(0deg) translateZ(18px);
-          transform: rotateX(0deg) translateZ(18px);
-}
-.social-container .social-cube .bottom {
-  -webkit-transform: rotateX(-90deg) translateZ(18px);
-          transform: rotateX(-90deg) translateZ(18px);
-}
-.social-container:hover .social-cube {
-  -webkit-transform: translateZ(-18px) rotateX(90deg);
-          transform: translateZ(-18px) rotateX(90deg);
+  float: left;
+  font: 22px "Patrick Hand", sans-serif;
+  margin-right: 7.5px;
+  margin-left: 7.5px;
+  text-transform: uppercase;
+  color: #000;
+  text-decoration: none;
+  padding-bottom: 3px;
+  border-radius: 5px;
+  box-shadow: 0 2px 0 #000;
+  transition: padding 0.1s, box-shadow 0.1s, top 0.1s;
+  background-color:black;
+  margin-top:15px;
 }
 
-.social-container.twitter .social-cube .front, .social-container.twitter .social-cube .back {
-  background: #4099FF;
+  h1{
+    margin-bottom:30px;
+    font: 40px "Patrick Hand", sans-serif;
+  }
+  
+  .boxed {
+  border: 10px solid black;
 }
-.social-container.twitter .social-cube .bottom {
-  background: #0d7eff;
-}
-.social-container.twitter:hover .social-cube .bottom {
-  background: #4099FF;
-}
-.social-container.twitter:hover .social-cube .front {
-  background: #73b4ff;
-}
-.social-container.facebook .social-cube .front, .social-container.facebook .social-cube .back {
-  background: #3b5998;
-}
-.social-container.facebook .social-cube .bottom {
-  background: #2d4373;
-}
-.social-container.facebook:hover .social-cube .bottom {
-  background: #3b5998;
-}
-.social-container.facebook:hover .social-cube .front {
-  background: #4c70ba;
-}
-.social-container.youtube .social-cube .front, .social-container.youtube .social-cube .back {
-  background: #CC181E;
-}
-.social-container.youtube .social-cube .bottom {
-  background: #9e1317;
-}
-.social-container.youtube:hover .social-cube .bottom {
-  background: #CC181E;
-}
-.social-container.youtube:hover .social-cube .front {
-  background: #e73036;
-}
-.social-container.github .social-cube .front, .social-container.github .social-cube .back {
-  background: #767676;
-}
-.social-container.github .social-cube .bottom {
-  background: #5d5d5d;
-}
-.social-container.github:hover .social-cube .bottom {
-  background: #767676;
-}
-.social-container.github:hover .social-cube .front {
-  background: #909090;
-}
-.social-container.dribbble .social-cube .front, .social-container.dribbble .social-cube .back {
-  background: #ea4c89;
-}
-.social-container.dribbble .social-cube .bottom {
-  background: #e51e6b;
-}
-.social-container.dribbble:hover .social-cube .bottom {
-  background: #ea4c89;
-}
-.social-container.dribbble:hover .social-cube .front {
-  background: #ef7aa7;
-}
-.social-container.codepen .social-cube .front, .social-container.codepen .social-cube .back {
-  background: #191919;
-}
-.social-container.codepen .social-cube .bottom {
-  background: black;
-}
-.social-container.codepen:hover .social-cube .bottom {
-  background: #191919;
-}
-.social-container.codepen:hover .social-cube .front {
-  background: #333333;
-}
+ 
+  </style>
+    <title>Seth's Electronic Portfolio</title>
+  </head>
+  <body>
+  
+  <div class="boxed">
+    <center>
+  <h1>Seth's Electronic Porfolio</h1>
+    </center>
+  </div>
+  
+   <hr style="height:5px;color:black;background-color:black; "/>
+ 
+  <a href="#" class="btn"><span>Contact</span></a>
+  <a href="#" class="btn"><span>Academics</span></a>
+  <a href="#" class="btn"><span>Work</span></a>
+  <a href="#" class="btn"><span>Volunteer</span></a>
+  <a href="#" class="btn"><span>Acomplishments</span></a>
+  
+  
+  </body>
