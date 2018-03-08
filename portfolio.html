@@ -1,4 +1,4 @@
-=<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
   <style>
@@ -8,14 +8,14 @@ body {
   background: #EEE;
 }
 a span {
-  background: #FFF;
+  background: white;
   display: block;
   padding: 5px 15px;
   border-radius: 5px;
   border: 2px solid #000;
 }
 a:hover {
-  box-shadow: 0 2px 0 #000, 0 2px 0px 2px #f03755;
+  box-shadow: 0 2px 0 #000, 0 2px 0px 2px red;
 }
 a:active {
   top: 4px;
@@ -26,8 +26,6 @@ a {
   position: relative;
   float: left;
   font: 22px "Patrick Hand", sans-serif;
-  margin-right: 1%;
-  margin-left: 1%;
   text-transform: uppercase;
   color: #000;
   text-decoration: none;
@@ -36,40 +34,62 @@ a {
   box-shadow: 0 2px 0 #000;
   transition: padding 0.1s, box-shadow 0.1s, top 0.1s;
   background-color:black;
-  margin-top:15px;
+  margin-top:20px;
+ 
+ 
 }
   h1{
-    margin-bottom:30px;
-    font: 40px "Patrick Hand", sans-serif;
+    margin-bottom:15px;
+    font: 45px "Patrick Hand", sans-serif;
+    background: white;
+    display: block;
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: 5px solid #000;
+    color: crimson;
+    position: relative;
+    width:50%;
+    height:70%;
   }
   
-  .boxed {
-  border: 10px solid black;
-}
+  .space{
+    float:left;
+    background: white;
+  }
+   ul {
+     list-style-type: none;
+     padding: 0px;
+     margin: 0;
+   }
  
- .space{
-  margin: auto;
-    width: 40%;
- }
   </style>
     <title>Seth's Electronic Portfolio</title>
   </head>
   <body>
   
-  <div class="boxed">
+  
     <center>
-  <h1>Seth's Electronic Porfolio</h1>
+  <h1>Seth's Electronic Portfolio</h1>
     </center>
-  </div>
+ 
   
    <hr style="height:5px;color:black;background-color:black; "/>
+   
  <div class="space">
-  <a href="#" class="btn"><span>Contact</span></a>
-  <a href="#" class="btn"><span>Academics</span></a>
-  <a href="#" class="btn"><span>Work</span></a>
-  <a href="#" class="btn"><span>Volunteer</span></a>
-  <a href="#" class="btn"><span>Acomplishments</span></a>
+ <ul>
+ 
+  <li><a href="#" class="btn"><span>Contact</span></a></li>
+  <br><br><br>
+  <li><a href="#" class="btn"><span>Academics</span></a></li>
+  <br><br><br>
+  <li><a href="#" class="btn"><span>Work</span></a></li>
+  <br><br><br>
+  <li><a href="#" class="btn"><span>Volunteer</span></a></li>
+  <br><br><br>
+  <li><a href="#"  class="btn"><span>Accomplishments</span></a></li>
+  </ul>
   </div>
+  
   
   </body>
   </html>
