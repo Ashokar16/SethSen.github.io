@@ -4,238 +4,75 @@
   <head>
     <style>
       body {
-        background: #FDD761;
-        font-family: 'Lucida Sans Unicode', 'Arial', serif;
-        color: white;
-      }
-
-      h1,
-      h4,
-      header .btn {
-        font-weight: 700;
+        background-image: url("https://background-tiles.com/overview/white/textures/large/5008.png");
       }
 
       h1 {
-        margin: 100px 0 20px;
-        text-transform: uppercase;
-        font-size: 2.6rem;
+        text-align: center;
+        font-size: 55px;
+        margin-top:15px;
       }
 
-      h3 {
-        margin-bottom: 25px;
-        font-size: 2.3rem;
-        text-align: left;
-      }
-
-      h4 {
-        font-size: 2rem;
-      }
-
-      h3:after {
-        content: '';
-        display: block;
-        width: 10%;
-        padding-top: 5px;
-        border-bottom: 3px solid whitesmoke;
-      }
-
-      h1+h4 {
-        font-weight: normal;
+      table {
+        margin: auto;
+        width: 50%;
+        padding: 10px;
+        font-size: 30px;
       }
 
       a {
-        text-align: center;
-        outline: none;
-        display: inline-block;
         text-decoration: none;
-        background: #fcca2f;
-        font-size: 14px;
-        color: steelblue;
-        text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
-        -webkit-transition: all ease .3s;
-        transition: all ease .3s;
+        color: grey;
       }
 
-      .btn {
-        font-size: 1.2em;
-        border-radius: 5px;
-        padding: 12px 30px;
-      }
-
-      /* HEADER STYLES
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-      header .btn {
-        text-transform: uppercase;
-      }
-
-      header a:hover,
-      .about a:hover {
-        background: #fcc316;
-      }
-
-      header .btn,
-      .services {
-        margin-top: 100px;
-      }
-
-      header {
-        padding: 80px 0 150px;
-      }
-
-      header {
-        background: url("https://unsplash.it/1080/720/?image=377") no-repeat fixed center / cover;
-        text-align: center;
-      }
-
-      nav ul,
-      .contact ul {
-        list-style: none;
-        font-size: 0;
-      }
-
-      nav li,
-      .contact li {
-        margin-bottom: 0;
-        display: inline-block;
-      }
-
-      nav li {
-        width: 50%;
-      }
-
-      nav a {
-        position: relative;
-        width: 100%;
-        height: 30px;
-        padding: 7px 0;
-        line-height: 30px;
-      }
-
-      nav li:nth-child(2n+1) a:after {
-        position: absolute;
-        content: '';
-        top: 19.5px;
-        right: -2.5px;
-        z-index: 10;
-        border-radius: 100%;
-        background: steelblue;
-        width: 5px;
-        height: 5px;
-      }
-
-      /* SERVICES STYLES
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-      .services a {
-        padding: 25px;
-        background: #fafafa;
-        margin-top: 20px;
-        border-radius: 4px;
-      }
-
-      .services a:hover {
+      a:hover {
         color: black;
       }
 
-      .services span {
-        font-size: 5.5em;
-        color: #f4ba04;
+      a:active {
+        color: grey;
       }
 
-      .services a:hover span {
-        color: white;
+      span {
+        padding-left: 25px;
+        padding-right: 25px;
       }
 
-      .services p {
-        margin: 15px 0 0;
-      }
-
-      /* MEDIA QUERIES STYLES
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-      @media (min-width: 550px) {
-        nav li {
-          width: auto;
-        }
-        a {
-          box-shadow: 0 8px #f4ba04;
-        }
-        nav a {
-          padding: 7px;
-          border-right: 1px solid #fabd03;
-          width: 80px;
-        }
-        nav li:nth-child(2n+1) a:after {
-          content: none;
-        }
-        nav li:last-child a {
-          border-right: none;
-        }
-        header a:hover,
-        .about a:hover {
-          box-shadow: 0 8px #f4ba04;
-        }
-        header a:active,
-        .about a:active {
-          box-shadow: 0 4px #f4ba04;
-          -webkit-transform: translateY(4px);
-          -ms-transform: translateY(4px);
-          transform: translateY(4px);
-        }
-        .about .one-third {
-          margin-top: 0;
-        }
-        .about .one-third a {
-          width: 35%;
-        }
-        .contact .creator a {
-          box-shadow: none;
-        }
-      }
-
-      @media (min-width: 750px) {
-        h1 {
-          font-size: 3.5rem;
-        }
-        h3 {
-          font-size: 2.8rem;
-        }
-        h4 {
-          font-size: 2.4rem;
-        }
-        .services a:hover {
-          box-shadow: 0 -8px white;
-          -webkit-transform: scale(1.15);
-          -ms-transform: scale(1.15);
-          transform: scale(1.15);
-        }
-        .contact ul a {
-          margin-left: 45px;
-        }
-        .contact ul span {
-          font-size: 3em;
-        }
+      .icon {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top:40px;
       }
 
     </style>
-    <title>Contact</title>
+    <title>Computer History</title>
   </head>
 
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Work</a></li>
-          <li><a href="#">Writing</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-      <h1>- Design What You Imagine -</h1>
-      <h4>Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy metus. Vestibulum volutpat pretium libero. Cras id dui.</h4>
-      <a href="#" class="btn">Hire me</a>
-    </header>
+    <img class="icon" src="https://previews.123rf.com/images/iamnee/iamnee1301/iamnee130100165/17417606-office-supply-a-cartoon-illustration-of-desktop-personal-computer-in-light-green-circle-frame.jpg" alt="Computer History" height="120" width="120">
+
+    <h1>Computer History</h1>
+    <table>
+      <tr>
+        <!--1970 tab-->
+        <td><a href=""><span>1970's</span></a></td>
+
+        <!--1980 tab-->
+        <td><a href=""><span>1980's</span></a></td>
+
+        <!--1990 tab-->
+        <td><a href=""><span>1990's</span></a></td>
+
+        <!--2000 tab-->
+        <td><a href=""><span>2000's</span></a></td>
+
+        <!--2010 tab-->
+        <td><a href=""><span>2010's</span></a></td>
+      </tr>
+    </table>
+
+    <p></p>
   </body>
 
 </html>
