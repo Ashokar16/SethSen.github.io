@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+background-color: blue;
+}
+  </style>
+<script>
+function startGame() {
+  var start = prompt("Are you Ready To Play? (YES or NO)").toLowerCase();
+  if (start === "yes") {
+    game();
+  } else {
+    alert("Restart and type Yes when you are ready to play!");
+    startGame();
+  }
+}
+
+
+let key = false;
+let sword = false;
+
+
+function game() {
+  alert("You wake up in a forest not knowing what happened to you. The only supplies you have are just water, clothes and food. You look around and you see to your north, a MOUNTAIN up ahead. You look to your east, you see a CABIN. Finally you look to the west and you see an old TEMPLE.");
+
+  var choiceOne = prompt("Where do you decide to go first? (CABIN, MOUNTAIN or TEMPLE)").toLowerCase();
+
+  switch (choiceOne) {
+
+    case "cabin":
+      cabin();
+      break;
+
+    case "mountain":
+      mountain();
+      break;
+
+    case "temple":
+      temple();
+      break;
+
+    default:
+      alert("Please spell the options correctly");
+      game();
+  }
+}
+
+
+
+function cabin() {
+  alert("You are now in the cabin, you see 3 rooms. You see a BEDROOM, KITCHEN, LIVING ROOM or EXIT.");
+  var cabinRoom = prompt("Which room do you enter first? (BEDROOM, KITCHEN, LIVING ROOM or EXIT)").toLowerCase();
+
+  switch (cabinRoom) {
+
+    case "bedroom":
+      cabinOne();
+      break;
+
+    case "kitchen":
+      cabinTwo();
+      break;
+
+    case "living room":
+      cabinThree();
+      break;
+
+    case "exit":
+      forest();
+      break;
+
+    default:
+      alert(cabinRoom + " is not an option. Please type the correct options!");
+      cabin();
+  }
+}
+
+function cabinOne() {
+  alert("You go inside the bedroom and as you look around you dicover a key on the bed.");
+  var bedroomKey = prompt("Do you choose to PICK UP or LEAVE the key? (PICK UP or LEAVE)").toLowerCase();
+  if (bedroomKey === "pick up") {
+    alert("You picked up the key and now you leave the room");
+    key = true;
+  } else if (bedroomKey === "leave") {
+    key = false;
+  }
+  cabin();
+}
+
+function cabinTwo() {
+  alert("You enter the kitchen and you see a note hanging on the wall. This may be a clue that you might need in the future.");
+  alert("The note says: a hole ");
+  alert("You leave the kitchen");
+  cabin();
+
+}
+
+function cabinThree() {
+  alert("You go living room and you see a sword placed on the table, you can either PICK UP or LEAVE the sword.");
+  var swordOne = prompt("Do you choose to PICK UP or LEAVE the sword? (PICK UP or LEAVE)").toLowerCase();
+  if (swordOne === "pick up") {
+    alert("You picked up the sword and now you leave the room");
+    sword = true;
+  } else if (swordOne === "leave") {
+    sword = false;
+  } else {
+    alert("I do not understand");
+    cabinThree();
+  }
+  cabin();
+}
+
+
+function mountain() {
+  alert("You arrived at the mountain and you see 2 paths your could take. The TOP of the mountain or a CAVE near the bottom of the mountian.");
+  var mountainPath = prompt("Do you decide to go to the TOP of the mountain, in the CAVE or LEAVE? (TOP, CAVE or LEAVE)").toLowerCase();
+
+  switch (mountainPath) {
+
+    case "top":
+      mountainTop();
+      break;
+
+    case "cave":
+      mountainCave();
+      break;
+
+    case "leave":
+      forest();
+      break;
+
+    default:
+      alert(mountainPath + " is not an option. Please type the correct options!");
+      mountain();
+
+  }
+}
+
+function mountainTop() {
+  alert("You reached to top of the mountain and see this old scroll. You open the scroll");
+  alert("The scroll says: When reached a path, one may have to use A COIN in order to pass");
+  alert("This might be important to remember as it seems to be a hint for something, maybe for riddle");
+  mountainLeave();
+}
+
+function mountainLeave() {
+  var mountLeave = prompt("Do you decide to stay and LOOK around or LEAVE? (LOOK or LEAVE)").toLowerCase();
+  if (mountLeave === "look") {
+    alert("It seems like nothing else is up here on top of the mountain");
+    mountainLeave();
+  } else if (mountLeave === "leave") {
+    mountain();
+  } else {
+    alert("I do not understand");
+    mountainLeave();
+  }
+}
+
+function mountainCave() {
+
+  if (sword === true) {
+
+    alert("You arrived at the cave and discover a troll, the troll looks very scary and does not look very friendly.");
+    alert("When you move forward more, the troll comes running to you, luckily you have a sword with you and you kill the troll.");
+    alert("After the troll is killed, you see a word on his body.");
+    alert("The word says: A joke. Maybe this might be a hint to a riddle.");
+    alert("After that successful kill, you go back to the forest.");
+    forest();
+
+  } else if (sword === false) {
+    alert("You arrived at the cave and discover a troll, the troll looks very scary and does not look very friendly.");
+    alert("Unfortunately, the troll looks too strong to kill, maybe you should go back and look for a weapon to kill the troll.");
+    alert("Since you cannot do anything else, you go back to the forest.")
+    forest();
+
+  } else {
+    alert("invalid");
+    mountainCave();
+  }
+}
+
+function temple() {
+  alert("You arrived at the temple and you see this big gate. It seems to be locked and cannot be opened, but on the gate you see printing on it. It says: When one have all 3 clues, may the gate shall be opened.");
+  var templeClue = prompt("Do you have all the clues? (YES or NO)").toLowerCase();
+  if (templeClue === "yes") {
+    var hole = prompt("I am weightless but can be seen. Put me in a bucket and ill make it lighter. What am I?").toLowerCase();
+    if (hole === "a hole" || hole === "hole") {
+      alert("Congratulations, you passed the first question, but can you pass the second question?");
+      var coin = prompt("I can be made and i can be played. I can be cracked and i can be told. What am I?").toLowerCase();
+      if (coin === "a joke" || coin === "joke") {
+        alert("You passed the 2 riddles, now can you figure out the last one?");
+        var morse = prompt("...-- ..--- ..... -....").toLowerCase(); // 3256 //
+        if (morse === "3256") {
+          alert("Congratulations! You figured out all the riddles and the gate now opens! (Maybe you should save that number: 3256)");
+          templeArea();
+        } else {
+          alert("Sorry Try Again!");
+          temple();
+        }
+      } else {
+        alert("Sorry Try Again!");
+        temple();
+      }
+    } else {
+      alert("Sorry Try Again!");
+      temple();
+    }
+  } else if (templeClue === "no") {
+    alert("Maybe you should go back and find all the clues before you enter the temple.");
+    forest();
+  } else {
+    alert(templeClue + " is not in my vocabulary, please try again.");
+    temple();
+  }
+}
+
+
+function templeArea() {
+  alert("When you enter you see 2 pathways. Which path do you take?");
+  var path = prompt("The LEFT path or RIGHT path, or do you wish to LEAVE? (LEFT, RIGHT or LEAVE)").toLowerCase();
+
+  switch (path) {
+
+    case "left":
+      templeLeft();
+      break;
+
+    case "right":
+      templeRight();
+      break;
+
+    case "leave":
+      forest();
+      break;
+
+    default:
+      alert(path + " is not an option. Please type the correct options!");
+      templeArea();
+
+  }
+}
+
+function templeLeft() { //key and easy//
+  alert("As you go to the left pathway, you see a door. The door seems to be locked and the only way it can be opened is that if you use a key.")
+  if (key === true) {
+
+    alert("Fortunately, you have the key to open the door. ");  
+    alert("As you keep walking you see a mysterious door.")
+    alert("When you arrive at the door, you see it is a locked door.");
+    lockedDoor();
+
+  } else if (key === false) {
+    alert("Unfortunately, you do not have a key and there is no other way to open the door without the key. In doing so, the only option for you is to go the right pathway.");
+
+    templeRight();
+
+  } else {
+    alert("invalid");
+    templeLeft();
+  }
+}
+
+function templeRight() { // no key and not easy //
+  alert("You entered the right pathway and the pathway behind closes shut. As you come closer, you see another door, the only option is to go through that door since the pathway from before is now shut.");
+  tempOne();
+}
+
+function tempOne() {
+  alert("As you enter, you see a flat wall with writtings on it. Yet you find another riddle on the wall. The riddle says...");
+  var coiny = prompt("What is brown or silver, has a head and tail but no arms or legs? WHAT AM I? (Warning: if answer invalid, the game will restart.)").toLowerCase();
+  if (coiny === "a coin" || coiny === "coin") {
+    alert("Congratz, you correctly answered the question. And now you see a secret passage.");
+    alert("When you entered the passageway, you see a mysterious door. When you arrive at the door you see it is a locked door.");
+    lockedDoor();
+  } else {
+    alert("Sorry " + coiny + " is not a valid answer. Unfortunetly you died, you lost the game!");
+  }
+}
+
+function lockedDoor() {
+  alert("Maybe you should look around and see just in case if there is a key laying around.");
+  var look = prompt("Do you wish to LOOK?").toLowerCase();
+  if (look === "yes" || look === "look") {
+    alert("You look around and you see 2 holes that only your hands can fit through. On the writing on the wall it says..");
+    alert("Either choose LEFT or RIGHT. Choose carefully or you will face a terrible death!");
+    var hole = prompt("Do you wish to pick LEFT or RIGHT?").toLowerCase();
+    if (hole === "left") {
+      alert("Good decision, you picked the right hole. When you reached in the hole, you find and key. You open the locked door with the key and once again it is another room.");
+      finalRoom();
+    } else if (hole === "right") {
+      alert("Good decision, you picked the right hole. When you reached in the hole, you find and key. You open the locked door with the key and once again it is another room.");
+      finalRoom();
+    } else {
+    alert(hole + " is not an answer")
+    lockedDoor();
+    }
+    
+
+  } else {
+    alert("It seems that you are locked in that room and to look around is the only option.");
+    lockedDoor();
+  }
+}
+
+function finalRoom() {
+alert("You entered the room and you see buttons ranging from 1 to 9. It looks like you have to enter a code.");
+var code = prompt("It is a 4 digit code. What is the code?");
+if (code === "3256"){
+alert("Good work! The door opened and you see light from outside of the door. And as you stepped outside....");
+game();
+} else {
+alert(code + " seems to be incorrect, try another code! ");
+finalRoom();
+}
+}
+
+function forest() {
+  alert("You are now in the forest. You look around and you see to your north, a MOUNTAIN up ahead. You look to your east, you see a CABIN. Finally you look to the west and you see an old TEMPLE.");
+
+  var forestChoice = prompt("Where do you decide to go first? (CABIN, MOUNTAIN or TEMPLE)").toLowerCase();
+
+  switch (forestChoice) {
+
+    case "cabin":
+      cabin();
+      break;
+
+    case "mountain":
+      mountain();
+      break;
+
+    case "temple":
+      temple();
+      break;
+
+    default:
+      alert("Please spell the options correctly");
+      forest();
+  }
+}
+
+startGame();
+
+</script>
+</head>
+<body>
+  <center>
+    <h1>
+      The Lost Forest
+    </h1>
+  </center>
+  <center>
+  <button type="button" onclick=startGame()>Start Game</button>
+  </center>
+</body>
+</html>
